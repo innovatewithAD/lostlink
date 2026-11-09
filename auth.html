@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register | LostLink</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/auth.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">LostLink</a>
+    <nav aria-label="Main navigation"><a href="/">Home</a><a href="/auth">Login / Register</a></nav>
+  </header>
+
+  <main class="container">
+    <div class="page-intro"><p class="eyebrow">STUDENT ACCOUNT</p><h1>Welcome to LostLink</h1><p class="muted">Login to manage your reports or create a new account.</p></div>
+    <p class="notice" role="status">{{AUTH_NOTICE}}</p>
+    <div class="auth-grid">
+      <section class="form-card" id="login">
+        <h2>Login</h2>
+        <form method="POST" action="/login" class="stack-form" data-validate>
+          <label>Email<input type="email" name="email" maxlength="120" autocomplete="email" required></label>
+          <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+          <button class="button" type="submit">Login</button>
+        </form>
+      </section>
+
+      <section class="form-card" id="register">
+        <h2>Create an account</h2>
+        <form method="POST" action="/register" class="stack-form" data-validate>
+          <label>Full name<input name="name" maxlength="60" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" maxlength="120" autocomplete="email" required></label>
+          <label>Password<input type="password" name="password" minlength="8" autocomplete="new-password" required><span class="field-help">Use at least 8 characters.</span></label>
+          <button class="button" type="submit">Register</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer><p>LostLink — College Lost &amp; Found</p></footer>
+</body>
+</html>

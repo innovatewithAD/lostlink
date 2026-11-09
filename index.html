@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A college lost and found reporting website.">
+  <title>LostLink | College Lost &amp; Found</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">LostLink</a>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/auth">Login / Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">COLLEGE LOST &amp; FOUND</p>
+      <h1>Lost something on campus?</h1>
+      <p class="lead">LostLink gives students one place to report missing belongings and share items they have found.</p>
+      <div class="actions">
+        <a class="button" href="/auth#register">Create an account</a>
+        <a class="button button-light" href="/auth#login">Login</a>
+      </div>
+    </section>
+
+    <section class="info-grid" aria-label="How LostLink works">
+      <article class="info-card"><h2>Report</h2><p>Add details about an item you lost or found.</p></article>
+      <article class="info-card"><h2>Browse</h2><p>See reports shared by other students.</p></article>
+      <article class="info-card"><h2>Update</h2><p>Edit your report or mark an item as recovered.</p></article>
+    </section>
+
+    <section class="contact-section">
+      <div><p class="eyebrow">NEED HELP?</p><h2>Send us a message</h2><p class="muted">Use this form for questions about the website.</p></div>
+      <form method="POST" action="/inquiry" class="stack-form contact-form" data-validate>
+        <label>Your name<input name="name" maxlength="60" required></label>
+        <label>Email<input type="email" name="email" maxlength="120" required></label>
+        <label>Message<textarea name="message" rows="3" maxlength="600" required></textarea></label>
+        <button class="button" type="submit">Send message</button>
+        <p class="form-note">{{INQUIRY_NOTICE}}</p>
+      </form>
+    </section>
+  </main>
+
+  <footer><p>LostLink — College Lost &amp; Found</p></footer>
+</body>
+</html>

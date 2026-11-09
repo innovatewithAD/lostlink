@@ -1,0 +1,13 @@
+{
+  "name": "lostlink",
+  "version": "2.0.0",
+  "description": "College lost and found website built with HTML, CSS, JavaScript, Node.js and MongoDB.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check User.js && node --check PortfolioItem.js && node --check Inquiry.js && node --check auth.js && node --check manager.js && node --check portfolio.js && node --check script.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.0.0"
+  }
+}

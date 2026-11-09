@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PAGE_TITLE}} | LostLink</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/manager.js" defer></script>
+  <script src="/portfolio.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/dashboard">LostLink</a>
+    <nav aria-label="Main navigation">
+      <a href="/dashboard">All reports</a>
+      <a href="/my-reports">My reports</a>
+      <a href="/add">Report an item</a>
+      <form class="nav-form" method="POST" action="/logout"><input type="hidden" name="_csrf" value="{{CSRF_TOKEN}}"><button class="nav-button" type="submit">Logout</button></form>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <div><p class="eyebrow">LOSTLINK DASHBOARD</p><h1>{{PAGE_HEADING}}</h1><p class="muted">Signed in as {{USER_NAME}}.</p></div>
+      <a class="button" href="/add">+ Report an item</a>
+    </section>
+
+    {{NOTICE}}
+    {{ITEM_FORM}}
+
+    <section class="reports-section">
+      <div class="section-heading">
+        <div><h2>{{REPORTS_HEADING}}</h2><p class="muted">{{REPORT_COUNT}} report(s)</p></div>
+        <label class="search-label">Search reports<input id="reportSearch" type="search" placeholder="Search name, category or location" autocomplete="off"></label>
+      </div>
+      <div class="item-grid" id="reportList">{{REPORTS}}</div>
+      <p class="empty-search" id="emptySearch" hidden>No reports match your search.</p>
+    </section>
+  </main>
+
+  <footer><p>LostLink — College Lost &amp; Found</p></footer>
+</body>
+</html>
