@@ -2,7 +2,7 @@
 
 LostLink is a small website for a college campus. Students can create an account, report an item they lost or found, browse reports from other students, and manage their own reports.
 
-This project uses the same main file names as the reference repository you shared, adapted to the LostLink idea. The files are connected and used by the application; they are not just empty placeholders.
+
 
 ## Features
 
@@ -26,7 +26,6 @@ This project uses the same main file names as the reference repository you share
 - **MongoDB Community Server** – local database
 - **MongoDB Node.js driver** – connects Node.js to MongoDB
 
-No Express, React, Bootstrap, Mongoose, Firebase or MongoDB Atlas is used.
 
 ## Files and folders
 
@@ -163,21 +162,3 @@ Check JavaScript syntax with:
 npm run check
 ```
 
-## Notes and limitations
-
-- This is an educational college project, not a production-ready public service.
-- Passwords are not stored as plain text. The app hashes them using Node.js built-in `crypto` functions.
-- Login sessions are kept in server memory. Restarting Node.js logs users out.
-- For a real public website, use HTTPS and a persistent session store, and conduct a full security review before deployment.
-- The MongoDB Community Server must be running before `npm start`.
-- The contact form stores inquiries in MongoDB; this student project does not include an admin inbox for reading them.
-
-## GitHub upload
-
-1. Create a new repository on GitHub.
-2. Extract the ZIP.
-3. Open the extracted `LostLink` folder in VS Code.
-4. Open the Source Control panel, initialize the repository if prompted, and commit the files.
-5. Add your GitHub repository as the remote and push the `main` branch.
-
-Made as an Internet Technology mini project.
